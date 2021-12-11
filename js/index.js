@@ -1,9 +1,19 @@
+/*
+    Storing the account SID and AUTH Token
+    as environment variables for security purposes.
+    For more info: https://twil.io/secure
+*/
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+
 const Twilio = require("twilio");
 
-const client = new Twilio("AC3beedfaa2c10cf264c5f55a9fbd8f947", "317ae7a4e83cd96b5603cfc0ff30b1e9");
+const client = new Twilio(accountSid, authToken);
 
+// Displays the most recent message sent from your Twilio account
 client.messages
     .list()
+    // JS Promise that returns the messages:
     .then((messages) => {
         console.log(`The most recent message is ${messages[0].body}`);
     })
