@@ -1,7 +1,7 @@
 <div align="center">
-    <h1>SMS Sender</h1>
+    <h1>Twilio's SMS API</h1>
     <img src="twilio.png" height="150px">
-    <h4>A Message Sending App in Python that uses Twilio's REST API to Send Messages</h4>
+    <h4>Testing Twilio's SMS API in JavaScript and Python</h4>
 </div>
 
 ## How to Run
